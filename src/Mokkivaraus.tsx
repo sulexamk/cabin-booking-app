@@ -1,5 +1,20 @@
 import React, { useState } from 'react';
-import { Select, MenuItem, FormControl, InputLabel, Slider, Checkbox, FormControlLabel, Typography } from '@mui/material';
+import {
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Slider,
+  Checkbox,
+  FormControlLabel,
+  Typography,
+  TextField,
+  Button,
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions
+} from '@mui/material';
 
 const mokit = [
   { nimi: 'Rantatalo', hinta: 200 },
@@ -12,11 +27,14 @@ function MokkiVaraus() {
   const [valittuMokki, setValittuMokki] = useState(mokit[0]);
   const [paivat, setPaivat] = useState(1);
   const [siivous, setSiivous] = useState(false);
+  const [nimi, setNimi] = useState('');
+  const [paivamaara, setPaivamaara] = useState('');
+  const [dialogiAuki, setDialogiAuki] = useState(false);
 
   const kokonaishinta = (valittuMokki.hinta * paivat) + (siivous ? 100 : 0);
 
   return (
-    <div style={{ padding: 20 }}>
+    <div style={{ padding: 20, maxWidth: 500, margin: '0 auto' }}>
       <FormControl fullWidth>
         <InputLabel>Mökki</InputLabel>
         <Select
@@ -51,9 +69,49 @@ function MokkiVaraus() {
         label="Lisää loppusiivous (100 €)"
       />
 
+      <TextField
+        label="Varaajan nimi"
+        variant="outlined"
+        fullWidth
+        value={nimi}
+        onChange={(e) => setNimi(e.target.value)}
+        style={{ marginTop: 20 }}
+      />
+
+      <TextField
+        label="Saapumispäivämäärä"
+        type="date"
+        fullWidth
+        InputLabelProps={{ shrink: true }}
+        value={paivamaara}
+        onChange={(e) => setPaivamaara(e.target.value)}
+        style={{ marginTop: 20 }}
+      />
+
       <Typography variant="h6" style={{ marginTop: 20 }}>
         Kokonaishinta: {kokonaishinta} €
       </Typography>
+
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => setDialogiAuki(true)}
+        style={{ marginTop: 30 }}
+      >
+        Varaa mökki
+      </Button>
+
+      <Dialog open={dialogiAuki} onClose={() => setDialogiAuki(false)}>
+        <DialogTitle>Varausvahvistus</DialogTitle>
+        <DialogContent>
+          <Typography>Nimi: {nimi}</Typography>
+          <Typography>Saapumispäivä: {paivamaara}</Typography>
+          <Typography>Kokonaishinta: {kokonaishinta} €</Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={() => setDialogiAuki(false)}>Sulje</Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }
