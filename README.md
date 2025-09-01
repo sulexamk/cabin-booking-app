@@ -20,6 +20,10 @@ npm install
 npm run dev
 ```
 
+## Live demo
+The project is published with GitHub Pages.  
+👉 [View it here](https://sulexamk.github.io/cabin-booking-app/)
+
 AI Assistance
 
 Parts of this project were developed with the help of AI tools (e.g., brainstorming UI structure, code snippets, and explanations).
