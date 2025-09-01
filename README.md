@@ -1,21 +1,31 @@
-# Sovellusohjelmointi 1 oppimistehtävät -startteri
+# Cabin Booking App
 
-Tämä on repositorio Sovellusohjelmointi 1 -opintojakson oppimistehtävän palautukseen. Kaikki palautukset oppimistehtäviin tulee sijoittaa sitä vastaavaan GitHub-repositorioon. Jokaiselle oppimistehtävälle luodaan uusi repositorio tehtävänannon yhteydessä olevasta GitHub Classroom -linkistä.
+React/Vite study project (Xamk). A simple cabin booking interface built as a school assignment.
 
-## Käytön ja käyttöönoton ohjeet:
+## Goals
+- Practice using React components and props  
+- Explore MUI (Material-UI) components for building a user interface  
+- Apply basic CSS styling for layout and design improvements  
+- Understand the Vite project structure and development workflow  
 
-1. Kloonaa repositorio omalle koneellesi (VS Code/ Command Line)
+## Technologies
+- **React** + **Vite**  
+- **TypeScript**  
+- **CSS**  
+- **MUI (Material-UI)**  
 
-2. Avaa kloonattu kansio VS Codella
+## Run locally
+```bash
+npm install
+npm run dev
+```
 
-3. Aloita tehtävän ratkaisu App.tsx -tiedostoon. Avaa VS Coden sisäänrakennettu komentokehote (Terminal) ja asenna kehitysympäristön riippuvuudet komennolla `npm install`. Sen jälkeen käynnistä kehitysympäristö komennolla `npm run dev`. Aloitusrepositorion package.json-tiedostoon on valmiiksi määritelty Vite:n tarvitsemat kehitysriippuvuudet.
+AI Assistance
 
-4. Toteuta sovellustasi ja ylläpidä repositoriota Git-työkulun mukaisesti joko VS Coden Git-työkalulla tai erillisinä Git komentoina komentokehotteessa:
+Parts of this project were developed with the help of AI tools (e.g., brainstorming UI structure, code snippets, and explanations).
+All code was reviewed, tested, and adjusted by me as part of the learning process.
 
-- git add . (Lisää muutetut tiedostot repositorioon)
-- git commit -m "kommentti" (Vahvistaa muutokset)
-- gut push origin main (Siirtää muuttuneen repositorion GitHubiin)
+License
 
-5. Tehtävää palauttaessasi varmista, että koodistasi on viimeisin versio myös GitHubissa ja olet ilmoittanut repositorion osoitteen tehtäväraportissa.
-
-6. Voit soveltaa tätä repositoriota kuten haluat. Voit tehdä oppimistehtävät suoraan repositorioon tai voit tehdä koodausta muualla ja kopioida valmiit koodit tähän repositorioon. Tärkeintä on, että koodit ovat opettajan luettavissa GitHubissa tehtäväraportin palautuksen yhteydessä.
+This project is created for educational purposes and is not intended for commercial use.
+You may view and use the code for learning.
